@@ -1,7 +1,9 @@
 {
     "hero_section": {
       "mobile_btn_text": "Join Now",
-      "desktop_btn_text": "Sign Up Today"
+      "desktop_btn_text": "Sign Up Today",
+      "mobile_title_text": "Does Your Broker Offer You All This?",
+      "desktop_title_text": "Does Your Futures Broker Offer You All This?" 
     }
   }
   
