@@ -61,34 +61,46 @@ const HeroPage = () => {
         />
       </div>
 
+
       {/*gentle black overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-25 z-[-1]"></div>
 
       {/*page content */}
+
       <div className="flex flex-col justify-center items-center min-h-screen gap-y-4 px-8 mx-4">
         {/*main text */}
-        <h1 className="text-7xl text-white">
+        <h1 className=" text-4xl sm:text-5xl lg:text-7xl  lg:mb-8 text-white max-w-screen-lg ">
           {titleText ? getStyledText(titleText) : "Loading..."}
         </h1>
 
         {/*cards*/}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-6">
-          <InfoCard mainText="$0.19" bottomText="Per Micro contract" />
-          <InfoCard mainText="$0.49" bottomText="Per Standard contract" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-6 lg:mb-8">
+          <InfoCard
+            mainText="$0.19"
+            bottomText="Per Micro contract"
+            className="rounded-tl-[36px]"
+          />
+          <InfoCard
+            mainText="$0.49"
+            bottomText="Per Standard contract"
+            className="lg:rounded-tl-[36px]"
+          />
           <InfoCard
             topText="Up to"
             mainText="3% interest"
             bottomText="on free margin"
-            className="sm:col-span-2 lg:col-span-1"
+            className="sm:col-span-2 lg:col-span-1 lg:rounded-tl-[36px]"
           />
         </div>
 
         {/*buttons */}
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4">
-          <button className="bg-yellow-200 text-black py-4 px-20  ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <button className="bg-yellow-200 text-black py-4 px-20 transition transform hover:scale-110 active:scale-90 ">
             {buttonText || "Loading..."}
           </button>
-          <button className="text-white opacity-60">Free Demo</button>
+          <button className="text-white opacity-60 transition transform hover:scale-110 active:scale-90">
+            Free Demo
+          </button>
         </div>
       </div>
     </div>
